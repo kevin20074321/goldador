@@ -3,7 +3,7 @@ description = "a noise detection system that notify students of the general nois
 create-oidc-clients = false
 
 [[repos]]
-name = "CMU-Noise-Detection"
+name = "cmu-noise-detection"
 description = "a noise detection system that notify students of the general noise level and busyness of popular CMU common areas"
 
 [[membership]]
