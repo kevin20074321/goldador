@@ -9,6 +9,7 @@ import pytest
 
 from meta.loaders.members import load_members
 from meta.loaders.teams import load_teams
+from meta.validator.src.github_utils import GitHubRateLimitError
 from meta.validator.src.reporter import ErrorCode, Reporter, bind_reporter
 from meta.validator.src.rules.teams import TeamValidationError, TeamValidator
 
@@ -16,6 +17,7 @@ from .helper import has_error, no_errors
 from .mock_clients.mock_github_client import (
     MockGithubClientNotFound,
     MockGithubClientRateLimitExceeded,
+    MockGithubClientServerError,
     MockGithubClientValid,
     make_get_github_client,
 )
@@ -88,7 +90,7 @@ def test_team_lead_not_in_members(monkeypatch: MonkeyPatch) -> None:
 
 
 def test_rate_limited_github_team_repo_raises(monkeypatch: MonkeyPatch) -> None:
-    """Non-404 ``GithubException`` during repo checks should abort validation."""
+    """A GitHub rate-limit response during repo checks should abort validation."""
     reporter = Reporter()
     members = load_members(bind_reporter(reporter), MEMBERS_FOR_TEAMS)
     teams = load_teams(bind_reporter(reporter), "meta/tests/teams/valid.toml")
@@ -97,7 +99,23 @@ def test_rate_limited_github_team_repo_raises(monkeypatch: MonkeyPatch) -> None:
         GITHUB_CLIENT_FUNCTION_PATH,
         make_get_github_client(MockGithubClientRateLimitExceeded()),
     )
-    with pytest.raises(TeamValidationError):
+    with pytest.raises(GitHubRateLimitError, match="GitHub API rate limit exceeded"):
+        TeamValidator(teams, members, reporter).validate()
+
+
+def test_unexpected_github_error_aborts_team_validation(
+    monkeypatch: MonkeyPatch,
+) -> None:
+    """A non-rate-limit GitHub failure should abort team validation."""
+    reporter = Reporter()
+    members = load_members(bind_reporter(reporter), MEMBERS_FOR_TEAMS)
+    teams = load_teams(bind_reporter(reporter), "meta/tests/teams/valid.toml")
+    assert no_errors(reporter)
+    monkeypatch.setattr(
+        GITHUB_CLIENT_FUNCTION_PATH,
+        make_get_github_client(MockGithubClientServerError()),
+    )
+    with pytest.raises(TeamValidationError, match="Unexpected GitHub API error"):
         TeamValidator(teams, members, reporter).validate()
 
 

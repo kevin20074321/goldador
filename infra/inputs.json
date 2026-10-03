@@ -17,12 +17,15 @@
       "EthanZ2007",
       "HarishSenthilkumar",
       "JiayiH08",
+      "KevinL135",
       "KeyaanMatrix",
       "NainaEnock",
       "Yutai007",
+      "a-gupta123",
       "a-varigonda",
       "aanya21gupta",
       "amishigupta",
+      "angely32",
       "appleorange",
       "arhavthakkar",
       "arjunmaganti",
@@ -31,7 +34,9 @@
       "ay93546",
       "bmood25",
       "brady-q",
+      "cahove",
       "carolyne-chiang",
+      "charansr",
       "cheezypegasus",
       "csongfm",
       "davidx2-gif",
@@ -39,29 +44,45 @@
       "dishon949",
       "dzhou08",
       "eitankrajewski",
+      "ethanliu2026",
+      "faribahnuha",
       "graceguo16",
       "henhen1235",
       "hnaracodes",
       "ipyoon",
+      "jahuang24",
       "janek0420",
       "justinwu80",
       "k3t6hup",
+      "kevin20074321",
+      "khushij312",
       "klz037",
       "kzz9984",
+      "maxwellliu07",
+      "nicholascui225",
       "noe2971",
       "nosleep32",
+      "pnimmaga-jpg",
       "rarangil",
       "rayank7674",
       "riishp",
+      "rocketrules",
       "rohansp007",
+      "ryanwong05",
       "s520y",
       "sagelu1",
+      "sahilmmehta",
       "samad2084",
+      "sdavidi-ai",
       "sophiez3",
       "sophiezxh",
+      "stingray8",
       "szzxt",
       "tejaschaudhari131",
-      "veriivy"
+      "the-srianeesh",
+      "veriivy",
+      "victoriasun2007",
+      "ziwei-che"
     ]
   },
   "andrew_ids": {
@@ -83,6 +104,9 @@
       "abthakka",
       "amaganti",
       "amishig",
+      "angely",
+      "aravagar",
+      "aryangup",
       "audreyya",
       "audreyz2",
       "avarigon",
@@ -92,41 +116,59 @@
       "carolyne",
       "cesong",
       "charlie3",
+      "chove",
+      "csridhar",
       "darisan",
       "davidx2",
       "dhzhou",
       "ekrajews",
+      "ethanlil",
       "ethanzhe",
+      "fmn",
       "hhxu",
       "hnara",
       "hsenthil",
       "ipae",
       "ivanz",
       "janekim",
+      "jarretth",
       "jiayihu",
       "jzwu",
       "kasubash",
       "kelseyli",
+      "kevinlu3",
       "keyaans",
+      "khushij",
+      "ktan2",
       "kzzhao",
       "liweix",
+      "myliu2",
       "nainae",
       "nchandy",
+      "ncui2",
       "ndishon",
+      "pnimmaga",
       "rarangil",
+      "renfeirw",
       "rkha",
       "rpachava",
       "rparthip",
       "sabellah",
       "sagelu",
+      "sahilm",
       "samad",
+      "sdavidi",
       "seany2",
       "sophiez3",
+      "srianeek",
       "susanzuo",
       "szhang4",
       "tchaudha",
+      "tingrayc",
+      "vmsun",
       "yumengg2",
-      "yutailon"
+      "yutailon",
+      "ziweiche"
     ]
   },
   "teams": {
@@ -136,13 +178,21 @@
       "members": {
         "github_usernames": [
           "a-varigonda",
+          "ay93546",
           "brady-q",
-          "rohansp007"
+          "pnimmaga-jpg",
+          "rocketrules",
+          "rohansp007",
+          "the-srianeesh"
         ],
         "andrew_ids": [
+          "aravagar",
+          "audreyya",
           "avarigon",
           "bquo",
-          "rparthip"
+          "pnimmaga",
+          "rparthip",
+          "srianeek"
         ]
       },
       "admins": {
@@ -155,6 +205,88 @@
       },
       "repos": [
         "Andrew-Inbox"
+      ],
+      "create_oidc_clients": false
+    },
+    "brieflyai": {
+      "name": "Briefly AI",
+      "description": "Briefly allows users to curate multiple newsletters\nbased on their interests like in sports or finance.\nAn AI will automatically generate the newsletter described and email\nit to users at user-specified times.\n",
+      "members": {
+        "github_usernames": [
+          "cahove"
+        ],
+        "andrew_ids": [
+          "chove"
+        ]
+      },
+      "admins": {
+        "github_usernames": [
+          "cahove"
+        ],
+        "andrew_ids": [
+          "chove"
+        ]
+      },
+      "repos": [
+        "ai-newsletter"
+      ],
+      "create_oidc_clients": false,
+      "website": "",
+      "server": ""
+    },
+    "cmu-bulletin": {
+      "name": "CMU Bulletin",
+      "description": "Your one-stop shop for everything happening at Carnegie Mellon. Never miss an event on campus again.\n",
+      "members": {
+        "github_usernames": [
+          "angely32",
+          "ziwei-che"
+        ],
+        "andrew_ids": [
+          "angely",
+          "ziweiche"
+        ]
+      },
+      "admins": {
+        "github_usernames": [
+          "ziwei-che"
+        ],
+        "andrew_ids": [
+          "ziweiche"
+        ]
+      },
+      "repos": [
+        "CMU-Bulletin"
+      ],
+      "create_oidc_clients": true,
+      "website": "cmubulletin.com",
+      "server": "your-team-server.com"
+    },
+    "cmu-research": {
+      "name": "CMU Research",
+      "description": "CMU Research Team",
+      "members": {
+        "github_usernames": [
+          "jahuang24",
+          "nicholascui225"
+        ],
+        "andrew_ids": [
+          "jarretth",
+          "ncui2"
+        ]
+      },
+      "admins": {
+        "github_usernames": [
+          "jahuang24",
+          "nicholascui225"
+        ],
+        "andrew_ids": [
+          "jarretth",
+          "ncui2"
+        ]
+      },
+      "repos": [
+        "ResearchStarter"
       ],
       "create_oidc_clients": false
     },
@@ -190,15 +322,23 @@
           "SamEthanMathew",
           "Yuxiang-Huang",
           "a-varigonda",
+          "cahove",
           "dishon949",
-          "hanabenko"
+          "hanabenko",
+          "jahuang24",
+          "nicholascui225",
+          "ziwei-che"
         ],
         "andrew_ids": [
           "avarigon",
+          "chove",
           "hbenko",
+          "jarretth",
+          "ncui2",
           "ndishon",
           "semathew",
-          "yh4"
+          "yh4",
+          "ziweiche"
         ]
       },
       "admins": {
@@ -379,24 +519,6 @@
       "create_oidc_clients": true,
       "website": "wiki.scottylabs.org",
       "server": "api.wiki.scottylabs.org"
-    },
-    "cmuresearch": {
-      "name": "CMU Research",
-      "description": "The CMU Research team.",
-      "members": {
-        "github_usernames": [],
-        "andrew_ids": [
-          "bryung"
-        ]
-      },
-      "admins": {
-        "github_usernames": [],
-        "andrew_ids": [
-          "bryung"
-        ]
-      },
-      "repos": [],
-      "create_oidc_clients": true
     },
     "cmuservice": {
       "name": "CMU Service",
